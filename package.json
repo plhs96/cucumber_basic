@@ -14,7 +14,7 @@
     "cypress-cucumber-preprocessor": "^4.3.1"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true,
-    "step_definitions": "cypress/features"
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/support/step_definations"
   }
 }
