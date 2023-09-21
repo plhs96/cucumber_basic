@@ -5,7 +5,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       on('file:preprocessor', cucumber())
     },
-    specPattern: "cypress/features/*.feature",
+    specPattern: "**/*.feature",
     chromeWebSecurity: false
   },
 });

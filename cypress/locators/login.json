@@ -1,5 +1,0 @@
-{
-    "txtEmail": "//input[@placeholder='Your email address']",
-    "txtPassword": "//input[@placeholder='Your password']",
-    "btnSignIn": "//button[text()='Sign in']"
-}
