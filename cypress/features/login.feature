@@ -19,7 +19,7 @@ Feature: Login Functionality
             | user-pending-only@mailinator.com | 12345678 | Check your user-pending-only@mailinator.com inbox for an invitation link to join the domain.                                 | pending account   |
 
     Scenario Outline: Login valid with <type> in primary-domain
-        Given The login page in "primary-domain" site is opened successfull
+        Given The login page in "Primary-domain" site is opened successfull
         When Login with email: "<email>", domain: "<domain>" and password: "<password>"
         Then Verify url home page
         Examples:
@@ -27,8 +27,7 @@ Feature: Login Functionality
             | organization01@yopmail.com | Organization STG | 12345678 | valid account in multiple domain |
             | student29@yopmail.com      |                  | 12345678 | valid account in one domain      |
 
-    Scenario Outline: Login invalid with <type> in primary-domain
-       Given The login page in "primary-domain" site is opened successfull
+    Scenario Outline: Login invalid with <type> in "Primary-domain"
         When Login with email: "<email>", domain: "<domain>" and password: "<password>"
         Then the message "<message>" should be displayed
 
