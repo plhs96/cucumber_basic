@@ -28,7 +28,7 @@ Feature: Login Functionality
             | student29@yopmail.com      |                  | 12345678 | valid account in one domain      |
 
     Scenario Outline: Login invalid with <type> in primary-domain
-       Given The login page in "primary-domain" site is opened successfull
+     Given The login page in "primary-domain" site is opened successfull
         When Login with email: "<email>", domain: "<domain>" and password: "<password>"
         Then the message "<message>" should be displayed
 
