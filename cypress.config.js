@@ -5,8 +5,11 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       on('file:preprocessor', cucumber())
     },
-    baseUrl: "https://organization-stg.tabulalearning.net/",
     specPattern: "**/*.feature",
     chromeWebSecurity: false
   },
+  "env":{
+    "subDomainLink": "https://organization-stg.tabulalearning.net/",
+    "primaryDomainLink": "https://signin.tabulalearning.net/"
+  }
 });
