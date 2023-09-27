@@ -2,5 +2,6 @@
     "txtEmail": "//input[@placeholder='Your email address']",
     "txtPassword": "//input[@placeholder='Your password']",
     "btnSignIn": "//button[text()='Sign in']",
-    "btnNext": "//button[text()='Next' and @type ='submit']"
+    "btnNext": "//button[text()='Next' and @type ='submit']",
+    "lnkForgot": "//a[text()='Forgot password?']"
 }

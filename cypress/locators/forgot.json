@@ -1,0 +1,6 @@
+{
+    "txtEmail": "//input[@placeholder='Your email address']",
+    "btnGetResetLink": "//button[text()='Get reset link']",
+    "btnBackToSignIn": "//button[text()='Back to Sign in']",
+    "btnNext": "//button[text()='Next' and @type ='submit']"
+}
