@@ -12,12 +12,8 @@ Given('The login page in {string} site is opened successfull', (env) => {
     }
 })
 
-When('Login with email: {string} and password: {string}', (email, password) => {
-    cy.loginSubDomain(email, password)
-})
-
 When('Login with email: {string}, domain: {string} and password: {string}', (email, domain, password) => {
-    cy.loginPrimaryDomain(email, domain, password)
+    cy.login(email, password, domain)
 })
 
 Then('Verify url home page', () => {
