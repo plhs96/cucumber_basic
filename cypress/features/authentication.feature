@@ -1,9 +1,10 @@
-Feature: Login Functionality
+Feature: Authentication Functionality
 
-  Scenario: Login valid in sub-domain
+  Scenario: Login-Logout valid in sub-domain
     Given The login page in "Sub-domain" site is opened successfull
-    When Login with email: "organization01@yopmail.com" and password: "12345678"
+    When Login with email: "organization01@yopmail.com", domain:"" and password: "12345678"
     Then Verify url home page
+    And Logout
 
   Scenario Outline: Login invalid with <type> in sub-domain
     Given The login page in "Sub-domain" site is opened successfull
@@ -23,6 +24,7 @@ Feature: Login Functionality
     Given The login page in "primary-domain" site is opened successfull
     When Login with email: "<email>", domain: "<domain>" and password: "<password>"
     Then Verify url home page
+    And Logout
 
     Examples: 
       | email                      | domain           | password | type                             |

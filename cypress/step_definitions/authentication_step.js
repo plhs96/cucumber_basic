@@ -1,4 +1,4 @@
-import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
+import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps'
 require('../support/actions/authen')
 
 Given('The login page in {string} site is opened successfull', (env) => {
@@ -12,7 +12,7 @@ Given('The login page in {string} site is opened successfull', (env) => {
     }
 })
 
-When('Login with email: {string}, domain: {string} and password: {string}', (email, domain, password) => {
+When('Login with email: {string}, domain:{string} and password: {string}', (email, domain, password) => {
     cy.login(email, password, domain)
 })
 
@@ -22,4 +22,9 @@ Then('Verify url home page', () => {
 
 Then('the message {string} should be displayed', (message) => {
     cy.contains(message)
+})
+And('Logout', ()=>{
+    cy.logout()
+    cy.reload()
+    cy.url().should('include', 'login')
 })

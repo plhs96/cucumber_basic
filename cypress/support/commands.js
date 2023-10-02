@@ -22,7 +22,7 @@ Cypress.Commands.add('clicks', (...locators) => {
 
 Cypress.Commands.add('checkExist', (...locators) => {
     locators.forEach(locator => {
-        const element = cy.xpath("//*[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='reset password'] | //*[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='" + locator + "']")
+        const element = cy.xpath("//*[normalize-space(text())='" + locator + "']")
         element.should('exist')
     });
 })

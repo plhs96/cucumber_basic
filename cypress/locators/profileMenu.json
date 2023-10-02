@@ -1,0 +1,4 @@
+{
+    "btnMyProfile": "//*[text()='My Profile']",
+    "btnLogout": "//*[text()='Logout']"
+}
