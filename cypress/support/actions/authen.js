@@ -1,7 +1,9 @@
 const LocatorLogin = require('../../locators/login.json')
 const LocatorForgot = require('../../locators/forgot.json')
-const LocatorResetPassword = require('../../locators/setpassword.json')
-
+const LocatorsetPassword = require('../../locators/setpassword.json')
+const LocatorHeader = require('../../locators/header.json')
+const LocatorProfileMenu = require('../../locators/profileMenu.json')
+const LocatorMyProfile = require('../../locators/myProfile.json')
 
 Cypress.Commands.add('login', (email, password, domain) => {
     cy.url().then(url => {
@@ -72,6 +74,13 @@ Cypress.Commands.add('forgotPassword', (email, domain) => {
 })
 
 Cypress.Commands.add('setPassword', (newPassword, confirmPassword) => {
-    cy.types([LocatorResetPassword.txtNew, LocatorResetPassword.txtConfirm], [newPassword, confirmPassword])
-    cy.clicks(LocatorResetPassword.btnReset)
+    cy.types([LocatorsetPassword.txtNew, LocatorsetPassword.txtConfirm], [newPassword, confirmPassword])
+    cy.clicks(LocatorsetPassword.btnReset)
+})
+Cypress.Commands.add('changePassword', (currentPassword, newPassword, confirmPassword) => {
+    cy.types([LocatorsetPassword.txtCurent, LocatorsetPassword.txtNew, LocatorsetPassword.txtConfirm], [currentPassword, newPassword, confirmPassword])
+    cy.clicks(LocatorsetPassword.btnReset)
+})
+Cypress.Commands.add('gotoMyPassword', () => {
+    cy.clicks(LocatorHeader.btnProfile, LocatorProfileMenu.btnMyProfile, LocatorMyProfile.tbPassword)
 })

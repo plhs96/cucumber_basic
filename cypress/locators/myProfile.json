@@ -1,0 +1,4 @@
+{
+    "tbInformation": "//*[text()='Information']/ancestor::button",
+    "tbPassword": "//*[text()='Password']/ancestor::button"
+}

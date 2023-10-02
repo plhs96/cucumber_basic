@@ -1,8 +1,8 @@
-Feature: Forgot Password Functionality
+Feature: Password Functionality
 
   Scenario Outline: Forgot valid in sub-domain
     Given The forgot password page in "Sub-domain" site is opened successfull
-    When Input email "<email>" and choose domain ""
+    When Input email: "<email>" and choose domain: ""
     Then There is a message with content: "<message>"
     And Verify login with email "<email>", old password "<oldPassword>" and domain "" when message "<message>" is successfull before set password
     And Check eamil "<email>" and set password when message "<message>" is successfull
@@ -23,7 +23,7 @@ Feature: Forgot Password Functionality
 
   Scenario Outline: Forgot valid in primary-domain
     Given The forgot password page in "Primary-domain" site is opened successfull
-    When Input email "<email>" and choose domain: "<domain>"
+    When Input email: "<email>" and choose domain: "<domain>"
     Then There is a message with content: "<message>"
     And Verify login with email "<email>", old password "<oldPassword>" and domain "<domain>" when message "<message>" is successfull before set password
     And Check eamil "<email>" and set password when message "<message>" is successfull
@@ -41,4 +41,17 @@ Feature: Forgot Password Functionality
       | null                       |                  | Please enter a valid email address (e.g. someone@example.com).                                                              |             |             | false  |
       | null@yopmail.com           |                  | Sorry, your email address is not associated with any account. Please contact your school for assistance.                    |             |             | false  |
       | organization01@yopmail.com | Organization STG | We have sent you a link to reset your password of Organization STG. Please check your organization01@yopmail.com inbox now. |    12345678 |    87654321 | true   |
-      | student28@yopmail.com      |                  | We have sent you a link to reset your password of Organization STG. Please check your student28@yopmail.com inbox now.      | Password01  |    87654321 | true   |
+      | student28@yopmail.com      |                  | We have sent you a link to reset your password of Organization STG. Please check your student28@yopmail.com inbox now.      |    87654321 |    12345678 | true   |
+
+  Scenario: Change Password
+    Given The login page in "Sub-domain" site is opened successfull
+    When Login with email: "organization01@yopmail.com", domain:"" and password: "87654321"
+    And Goto Change Password Page
+    Then Change password and verrify result
+      | currentPassword | newPassword                               | confirmPassword                           | error                                                  |
+      |                 |                                           |                                           | Please enter your password.                            |
+      |        00000000 |                                  12345678 |                                  12345678 | Incorrect current password.                            |
+      |        87654321 |                                  12345678 |                                 123456789 | Confirmed password does not match the password above.  |
+      |        87654321 |                                         1 |                                         1 | Please choose a password that is 8-40 characters long. |
+      |        87654321 | 12345678901234567890123456789012345678901 | 12345678901234567890123456789012345678901 | Please choose a password that is 8-40 characters long. |
+      |        87654321 |                                  12345678 |                                  12345678 |                                                        |

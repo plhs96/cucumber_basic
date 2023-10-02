@@ -2,6 +2,6 @@
     "txtEmail": "//input[@placeholder='Enter your inbox here']",
     "btnGo": "//input[@placeholder='Enter your inbox here']/parent::*/parent::*/following-sibling::*//button",
     "txtMailItem": "//*[text()='today']/following-sibling::*/button",
-    "btn": "//*[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='reset password'] | //*[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='join'] | //*[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='confirm']",
+    "btn": "//*[normalize-space(text())='Join'] | //*[normalize-space(text())='Confirm'] | //*[normalize-space(text())='Reset Password']",
     "ifMail": "#ifmail"
 }

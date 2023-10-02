@@ -2,7 +2,7 @@ Feature: Login Functionality
 
   Scenario: Login valid in sub-domain
     Given The login page in "Sub-domain" site is opened successfull
-    When Login with email: "organization01@yopmail.com" and password: "12345678"
+    When Login with email: "organization01@yopmail.com", domain:"" and password: "12345678"
     Then Verify url home page
 
   Scenario Outline: Login invalid with <type> in sub-domain

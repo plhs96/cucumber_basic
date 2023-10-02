@@ -12,7 +12,7 @@ Given('The login page in {string} site is opened successfull', (env) => {
     }
 })
 
-When('Login with email: {string}, domain: {string} and password: {string}', (email, domain, password) => {
+When('Login with email: {string}, domain:{string} and password: {string}', (email, domain, password) => {
     cy.login(email, password, domain)
 })
 
