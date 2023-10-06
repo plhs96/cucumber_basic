@@ -1,9 +1,9 @@
-const LocatorLogin = require('../../locators/login.json')
-const LocatorForgot = require('../../locators/forgot.json')
-const LocatorsetPassword = require('../../locators/setpassword.json')
-const LocatorHeader = require('../../locators/header.json')
-const LocatorProfileMenu = require('../../locators/profileMenu.json')
-const LocatorMyProfile = require('../../locators/myProfile.json')
+const LocatorLogin = require('../../locators/authentication_authorization/login.json')
+const LocatorForgot = require('../../locators/authentication_authorization/forgot.json')
+const LocatorsetPassword = require('../../locators/authentication_authorization/setpassword.json')
+const LocatorHeader = require('../../locators/generalBar/header.json')
+const LocatorProfileMenu = require('../../locators/profile/profileMenu.json')
+const LocatorMyProfile = require('../../locators/profile/myProfile.json')
 
 Cypress.Commands.add('login', (email, password, domain) => {
     cy.url().then(url => {

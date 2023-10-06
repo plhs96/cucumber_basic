@@ -1,0 +1,5 @@
+{
+    "btnEdit": "//li[text()='Edit user']",
+    "btnDelete": "//li[text()='Delete user']",
+    "btnReInvite": "//li[contains(text(), '')]"
+}

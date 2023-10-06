@@ -1,0 +1,9 @@
+{
+    "txtFirstname": "//input[@placeholder='First name']",
+    "txtLastname": "//input[@placeholder='Last name']",
+    "txtEmail": "//input[@placeholder='Email']",
+    "btnSchoolManager": "//span[text()='School Manager']/parent::*",
+    "btnUserManager": "//span[text()='User Manager']/parent::*",
+    "btnCourseManager": "//span[text()='Course Manager']/parent::*",
+    "btnTeacher": "//span[text()='Teacher']/parent::*"
+}

@@ -1,0 +1,5 @@
+{
+    "btnCancel": "//button[text()='Cancel']",
+    "btnOK": "//button[text()='Cancel']/following-sibling::button",
+    "title": "//button[text()='Cancel']/parent::div/parent::div//h2//span"
+}

@@ -1,0 +1,5 @@
+{
+    "btnNew": "//button[text()='New']",
+    "txtSearchValue": "//input[@placeholder='Enter name']",
+    "btnOperation": "//tr/td[last()]//button"
+}

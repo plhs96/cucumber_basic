@@ -1,6 +1,7 @@
 require('cypress-iframe')
 const MailLocator = require('../../locators/mail.json')
 Cypress.Commands.add('checkMail', (mail) => {
+      cy.log("==================="+ mail)
       cy.visit('https://yopmail.com/')
       cy.xpath(MailLocator.txtEmail).focus().clear().type(mail).blur()
       cy.xpath(MailLocator.btnGo).click()

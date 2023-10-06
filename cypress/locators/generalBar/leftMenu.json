@@ -1,0 +1,8 @@
+{
+    "tbUser": "//*[text()='Users']/ancestor::*[@role='button']",
+    "tbStudentsGuardians": "//*[text()='Students & Guardians']/ancestor::*[@role='button']",
+    "tbCourseAdministration": "//*[text()='Course Administration']/ancestor::*[@role='button']",
+    "tbSubject":"//*[text()='Subjects']/ancestor::*[@role='button']",
+    "btnOption": "//img[@alt='ella_logo']/preceding-sibling::button",
+    "tbGradingSchemes": "//*[text()='Grading Scheme']/ancestor::*[@role='button']"
+}
